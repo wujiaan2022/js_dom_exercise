@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+
+    <div id="clock">00:00:00</div>
+
+    <script>
+        const clock = document.getElementById("clock");
+
+        // Function to display the current time
+        const displayCurrentTime = () => {
+            const now = new Date(); // Create a new Date object each time
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clock.innerText = `${hours}:${minutes}:${seconds}`; // Update the clock
+        };
+
+        // Update the clock every second
+        const myClock = setInterval(displayCurrentTime, 1000);
+
+        // Stop the clock when clicked
+        clock.addEventListener("click", () => clearInterval(myClock));
+    </script>
+
+</body>
+</html>

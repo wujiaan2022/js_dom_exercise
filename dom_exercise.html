@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Exercise</title>
+
+    <style>
+      .bigText {
+        font-size: 2em;
+      }
+    
+      .colorfulBackground {
+          background-color: #ffeb3b;
+      }
+    </style>
+</head>
+<body>
+
+  <!-- Exercise 8: Dynamic styles -->
+  <p id="styledParagraph">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi autem at in commodi optio atque maxime, vitae aliquam, nesciunt assumenda id ullam deleniti, iusto explicabo omnis voluptate? Alias, suscipit neque!
+  </p>
+
+  <button id="toggleTextSizeButton">🚀 Toggle Big Text</button>
+  <button id="toggleBackgroundColorButton">🌈 Toggle Background Color</button>
+
+  <script>
+
+    document.getElementById("toggleTextSizeButton").addEventListener("click", function() {
+      document.getElementById("styledParagraph").classList.toggle("bigText")
+    })
+
+    document.getElementById("toggleBackgroundColorButton").addEventListener("click", function() {
+      document.getElementById("styledParagraph").classList.toggle("colorfulBackground")
+    })
+
+  </script>
+
+
+  <!-- Exercise 1: Hello from the Script -->
+  <!-- Exercise 2: Powering Up with Buttons -->   
+  <!-- <button onclick='alert( "Button was clicked!")'>
+    Click me!
+  </button> -->
+  
+  <!-- <script>
+      alert( "Hello, Browser!")
+  </script> -->
+
+
+  <!-- Exercise 3: getElementById -->
+  <!-- <p id= "dynamicContent">
+    Original content
+  </p>
+
+  <button id = "changeButton">
+    Change Content
+  </button>
+
+  <script>
+    function changeContent() {
+      document.getElementById("dynamicContent")
+      .innerText = "Updated content!"
+    };
+    document.getElementById("changeButton")
+    .onclick = changeContent
+  </script> -->
+  
+  
+  <!-- Exercise 4: Dynamic Display -->
+  <!-- <input type="text" id="userName" placeholder="Enter your name">
+      
+  <p id="greetingText">Hello, World!</p>
+
+  <button id="sayHelloButton">🖐️ Say Hello!</button>
+
+  <script>
+      // Function to handle the button click
+      function sayHello() {
+          const userName = document.getElementById("userName").value.trim(); // Get the input value
+          if (userName) {
+              // If name is present, update the greeting
+              document.getElementById("greetingText").textContent = `Hello, ${userName}!`;
+          } else {
+              // If input is empty, reset to default
+              document.getElementById("greetingText").textContent = "Hello, World!";
+          }
+      }
+
+      // Attach the function to the button's onclick event
+      document.getElementById("sayHelloButton").onclick = sayHello;
+  </script> -->
+
+
+  <!-- Exercise 5: Colorful Choices -->
+  <!-- <label for="colorChoice">Color Options</label>
+  <select name="colorChoice" id="colorPicker">
+      <option value="" disabled selected>Select a color</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+  </select>
+  <button id="changeColorButton">🌈 Change Color</button>
+
+  <script>
+      // Get references to the dropdown and button
+      const colorPicker = document.getElementById("colorPicker");
+      const changeColorButton = document.getElementById("changeColorButton");
+
+      // Add a click event listener to the button
+      changeColorButton.onclick = function() {
+          // Get the selected color value
+          const selectedColor = colorPicker.value;
+
+          // Change the background color of the page to the selected color
+          document.body.style.backgroundColor = selectedColor;
+      };
+  </script> -->
+
+
+  
+  <!-- Exercise 6: Image Grid -->
+  <!-- <input type="text" name="" id="imageUrl" placeholder="Enter image URL">
+  <button id="addToGalleryButton">📌 Add to Gallery</button>
+  <div id="gallery" style="margin-top: 20px;"></div>
+
+  <script>
+    const imageUrlInput = document.getElementById("imageUrl");
+    const addToGalleryButton = document.getElementById("addToGalleryButton");
+
+    function appendImage() {
+      const imageUrl = imageUrlInput.value.trim(); // Remove unnecessary spaces
+      if (imageUrl) {
+        const newImage = document.createElement("img");
+        newImage.src = imageUrl;
+        newImage.style.width = "100px";
+        newImage.style.margin = "5px";
+        document.getElementById("gallery").appendChild(newImage);
+        imageUrlInput.value = ""; // Clear the input after adding
+      } else {
+        alert("Please enter a valid image URL!");
+      }
+    }
+
+    // Attach the function to the button's click event
+    addToGalleryButton.onclick = appendImage;
+    
+  </script> -->
+
+
+  <!-- Exercise 7: More Events -->
+  <!-- <input type="text" id="userName" placeholder="Enter your name">
+  <button id="onClickGreetButton" onclick="greetWithOnclick()">👆 Greet with OnClick!</button>
+  <button id="eventListenerGreetButton">🖱️ Greet with AddEventListener!</button>
+  <h2 id="greeting"></h2>
+
+  <script>
+    // Helper function to get the trimmed user name
+    function getUserName() {
+      return document.getElementById("userName").value.trim();
+    }
+
+    // Function to display the greeting
+    function displayGreeting(userName) {
+      const greeting = userName ? `Hello ${userName}!` : "Hello there! Please enter your name.";
+      document.getElementById("greeting").textContent = greeting; // Use textContent for better compatibility
+    }
+
+    // Function called by the onclick attribute
+    function greetWithOnclick() {
+      const userName = getUserName();
+      displayGreeting(userName);
+    }
+
+    // Add event listener for the second button
+    document.getElementById("eventListenerGreetButton").addEventListener("click", function () {
+      const userName = getUserName();
+      displayGreeting(userName);
+    });
+  </script> -->  
+
+</body>
+</html>
